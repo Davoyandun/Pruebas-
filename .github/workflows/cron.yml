@@ -9,4 +9,5 @@ jobs:
       - name:  cron job slack notification
         run: |
           curl --request GET \
-          --url 'https://stg.reservations.ioet.com/api/slackBot/users' 
+          --url 'https://stg.reservations.ioet.com/api/slackBot/spots' \
+          
