@@ -1,0 +1,14 @@
+
+name: Schedule invoices 
+on:
+  schedule:
+    - cron: '*/2 * * * ? *'
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  cron job for save invoices
+        run: |
+          curl --request POST \
+          --url 'https://stg.payroll.ioet.com/invoice/save' 
+  
