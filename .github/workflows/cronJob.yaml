@@ -2,7 +2,7 @@
 name: Schedule invoices 
 on:
   schedule:
-    - cron: '*/2 * * * ? *'
+    - cron: '*/2 * * * *'
 jobs:
   cron:
     runs-on: ubuntu-latest
