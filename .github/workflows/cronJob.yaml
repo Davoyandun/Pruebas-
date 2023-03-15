@@ -3,10 +3,8 @@ on:
   schedule:
     - cron: "*/2 * * * *"
 jobs:
-  cron:
+  call-pokemon-api:
     runs-on: ubuntu-latest
     steps:
-      - name: cron job for save invoices
-        run: |
-          curl --request POST \
-          --url 'https://stg.payroll.ioet.com/invoice/save'
+      - name: Call Pokemon API
+        run: curl {{ secrets.ENDPOINT}}
