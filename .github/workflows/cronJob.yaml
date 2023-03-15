@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Pokemon API
-        run: curl '{{ secrets.ENDPOINT}}'
+        run: curl '${{ secrets.ENDPOINT}}'
