@@ -11,5 +11,4 @@ jobs:
       - name: Make POST Request for Save Invoices
         run: |
           curl --request POST \
-          --url '${{secrets.ENDPOINT_SAVE_INVOICES_STG}}' \
-          --header 'cron-key: ${{secrets.CRON_JOB_KEY}}'
+          --url 'https://jsonplaceholder.typicode.com/todos/1' 
