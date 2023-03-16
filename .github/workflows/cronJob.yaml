@@ -1,12 +1,15 @@
-name: Schedule invoices
+name: Cron Job For Save Invoices
+
 on:
   schedule:
-    - cron: "*/2 * * * *"
+    - cron: "0/5 * * * *" # Every 15 minutes
+
 jobs:
-  call-pokemon-api:
+  post_request:
     runs-on: ubuntu-latest
     steps:
-      - name: Call Pokemon API
+      - name: Make POST Request for Save Invoices
         run: |
-          curl --request GET \
-          --url '${{ secrets.ENDPOINT }}'
+          curl --request POST \
+          --url '${{secrets.ENDPOINT_SAVE_INVOICES_STG}}' \
+          --header 'cron-key: ${{secrets.CRON_JOB_KEY}}'
