@@ -2,7 +2,7 @@ name: Cron Job For Save Invoices
 
 on:
   schedule:
-    - cron: "0/5 * * * *" # Every 15 minutes
+    - cron: "0/6 * * * *" # Every 15 minutes
 
 jobs:
   post_request:
@@ -11,10 +11,5 @@ jobs:
       - name: Make POST Request for Save Invoices
         run: |
           curl -X POST \
-          'http://api.payroll.ioet.com/invoice/save' \
-          --header 'Accept: */*' \
-          --header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
-          --header 'cron-key: AIzaSyDh9JtXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
-          --header 'Content-Type: application/json' \
-          --data-raw '{"file_name": "anthony.cordova_04-23.xml"
-          }' 
+          'http://api.payroll.ioet.com:3001/invoice/save' \
+          --header 'cron-key: AIzaSyDh9JtXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
