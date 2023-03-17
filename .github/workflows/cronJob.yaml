@@ -10,5 +10,11 @@ jobs:
     steps:
       - name: Make POST Request for Save Invoices
         run: |
-          curl --request POST \
-          --url 'https://jsonplaceholder.typicode.com/todos/1' 
+          curl -X POST \
+          'http://api.payroll.ioet.com:3001/invoice/save' \
+          --header 'Accept: */*' \
+          --header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
+          --header 'cron-key: AIzaSyDh9JtXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+          --header 'Content-Type: application/json' \
+          --data-raw '{"file_name": "anthony.cordova_04-23.xml"
+          }' 
