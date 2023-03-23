@@ -2,7 +2,7 @@ name: Cron Job For Save Invoices
 
 on:
   schedule:
-    - cron: "0/5 * * * *" # Every 15 minutes
+    - cron: "0/6 * * * *" # Every 15 minutes
 
 jobs:
   post_request:
