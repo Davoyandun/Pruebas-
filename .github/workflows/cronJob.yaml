@@ -11,5 +11,5 @@ jobs:
       - name: Make POST Request for Save Invoices
         run: |
           curl -X POST \
-          'http://api.payroll.ioet.com:3001/invoice/save' \
+          'https://stg.api.payroll.ioet.com/invoice/save' \
           --header 'cron-key: AIzaSyDh9JtXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
