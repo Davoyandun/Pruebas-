@@ -2,7 +2,7 @@ name: Cron Job For Save Invoices
 
 on:
   schedule:
-    - cron: "0/6 * * * *" # Every 15 minutes
+    - cron: "0/2 * * * *" # Every 15 minutes
 
 jobs:
   post_request:
@@ -11,5 +11,5 @@ jobs:
       - name: Make POST Request for Save Invoices
         run: |
           curl -X POST \
-          'https://stg.api.payroll.ioet.com/invoice/save' \
-          --header 'cron-key: AIzaSyDh9JtXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+            'https://stg.api.payroll.ioet.com/invoice/save' \
+            --header 'Cron-Key: AIzaSyDh9JtXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
